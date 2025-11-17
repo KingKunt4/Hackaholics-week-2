@@ -17,7 +17,7 @@ body{
     "logo header"
     "sidebar main";
     margin: 10px;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 2fr;
     gap: 10px;
 }
 .logo{
@@ -109,7 +109,7 @@ body{
 }
 .info-cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0px, 300px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
     gap: 30px;
 }
 .info-cards div{
@@ -125,6 +125,9 @@ body{
     display: none;
 }
 @media (max-width: 800px) {
+    .hide-on-mobile{
+        display: none;
+    }
     .hide-on-desktop{
         display: block;
     }
