@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="res/icon.png" type="image/x-icon">
+        <title>Token</title>
+    </head>
+    <body>
+        <div class="dashboard">
+            <div class="logo">
+                <div style="display:flex; gap: 1em;">
+                <img src="res/icon.png" alt="icon" class="icon"> 
+                <p>Token</p>
+                </div>
+                <img class="hide-on-desktop burger" onclick="showSideBar()" src="res/burger.png" alt="burger">
+            </div>
+            <div class="header">
+                <input type="text" placeholder="Search Task">
+                <div class="user-info">
+                    <img src="res/inbox.png" alt="inbox" class="inbox-icon">
+                    <img src="res/user-img.jpg" alt="user-img" class="user-img">
+                    <ul>
+                        <li><h2>king Kunta</h2></li>
+                        <li><p>Kingknt4@taskit.io</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <h4>Menu</h4>
+                    <li class="hide-on-mobile"><a class="dashboard-txt" href="#Dashboard">Dashboard</a></li>
+                    <li class="hide-on-mobile"><a href="#analytics">Tasks</a></li>
+                    <li class="hide-on-mobile"><a href="#calendar">Calendar</a></li>
+                    <li class="hide-on-mobile"><a href="#analytics">Analytics</a></li>
+                    <h4>General</h4>
+                    <li class="hide-on-mobile"><a href="#settings">Settings</a></li>
+                    <li class="hide-on-mobile"><a href="#Help">Help</a></li>
+                    <li class="hide-on-mobile"><a href="#Logout">Log Out</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <h1>Dashboard</h1>
+
+                <div class="info-cards">
+                    <div style="background: radial-gradient(green, rgb(3, 91, 3));">
+                        <p><img src="res/user.png"> Users</p>
+                        <h2>245</h2>
+                        <span style="color: green;"><img src="res/up.png" alt="up"><p>21.24%</p></span>
+                    </div>
+                    <div>
+                        <p><img src="res/sales.png"> Sales</p>
+                        <h2>$24.64</h2>
+                        <span style="color: red;"><img src="res/down.png" alt="down"><p>4.20%</p></span>
+                    </div>
+                    <div>
+                        <p><img src="res/revenue.png"> Total Revenue</p>
+                        <h2>$445.44</h2>
+                        <span style="color: green;"><img src="res/up.png" alt="up"><p>10.20%</p></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>
