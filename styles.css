@@ -17,7 +17,7 @@ body{
     "logo header"
     "sidebar main";
     margin: 10px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 5fr;
     gap: 10px;
 }
 .logo{

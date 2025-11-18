@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="portfolio.css">
+        <link rel="icon" href="#" type="image/x-icon">
+        <title>portfolio | Otega Richard</title>
+    </head>
+    <body>
+        <header>
+            <h1>Otega <span style="color: rgb(17, 221, 17)">Richard</span>.</h1>
+            <nav class="navbar hide-on-mobile">
+                <ul>
+                    <li><img id="toggle-btn" src="res/dark-mode.png" alt="dark-mode"></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn" id="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="sidebar" id="sidebar">
+                <ul>
+                    <li><img  id="toggle-btn" src="res/dark-mode.png" alt="dark-mode"></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero">
+            <div class="text">
+                <p><strong style="color: rgb(17, 221, 17); font-weight: 700;">Hello.</strong></p>
+                <ul style="color: #333"><li><p style="color: rgb(17, 221, 17) ;">i'm Otega</p></li></ul>
+                <h2>Web Developer.</h2>
+                <p>I'm a Web Developer with extensive experinces for over 2 years. My expertise is designing, creating and hosting mordern and responsive websites that convert.</p>
+                <button>Hire Me</button>
+            </div>
+            <div class="profile-img">
+                <img src="res/tega.png">
+            </div>
+        </section>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const sideBar = document.getElementById('sidebar');
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                sideBar.classList.toggle('active');
+            });
+            const buttons = document.querySelectorAll('#toggle-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                document.body.classList.toggle('darkmode');
+            });
+            });
+            
+        </script>
+    </body>
+</html>
