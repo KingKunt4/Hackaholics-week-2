@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="spaces.css">
+        <link rel="icon" href="#" type="image/x-icon">
+        <title>Spaces</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="res/logo-clear.png" alt="logo">
+                <h1>Spaces</h1>
+            </div>
+            <nav class="navbar hide-on-mobile">
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="cta hide-on-mobile">
+                <ul>
+                    <li><a href="#">Sign in</a></li>
+                    <li class="get-demo"><a href="#">Get demo</a></li>
+                </ul>
+            </div>
+            <div class="menu-btn" id="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>    
+            <nav id="sidebar" class="sidebar">
+                <ul>
+                    <li class="get-demo"><a href="#">Get demo</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Sign in</a></li>
+                </ul>
+            </nav>
+        <section class="hero-section">
+            <img class="git-card shrink" src="res/git-card.png">
+            <img class="dice" src="res/logo-white.png" alt="logo">
+            <h1>Collaborate, <span style="color: #f59e0b">build</span>, and ship</h1>
+            <h2>all in one place</h2>
+            <p>increase efficiency and reduce build time with cloud workpaces</p>
+            <a href="#">Get Free Demo</a>
+                
+                <img class="rank-card shrink" src="res/rank-card.png">
+                <img class="comm-card shrink" src="res/comm-card.png">
+        </section> 
+        <section class="display-section">
+            <div>
+
+            </div>
+        </section>       
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const sideBar = document.getElementById('sidebar');
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                sideBar.classList.toggle('active');
+            });
+        </script>
+    </body>
+</html>
