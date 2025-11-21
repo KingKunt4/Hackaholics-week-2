@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="pricing.css">
+        <link rel="icon" href="res/logo-clear.png" type="image/x-icon">
+        <title>Pricing | Spaces</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="res/logo-clear.png" alt="logo">
+                <h1>Spaces</h1>
+            </div>
+            <nav class="navbar hide-on-mobile">
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="blog.html">Resources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            </div>
+            <div class="signin-btn hide-on-mobile">
+                <a href="#">Sign in</a>
+            </div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>    
+            <nav id="sidebar" class="sidebar">
+                <ul>
+                    <li><a href="spaces.html">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="blog.html">Resources</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Sign in</a></li>
+                </ul>
+            </nav>
+            <section class="pricing-section">
+                <h2>Pricing</h2>
+                <h3>Choose the Perfect Plan for You</h3>
+                <div class="period">
+                    <p id="monthly" onclick="monthly()">Monthly</p>
+                    <p>|</p>
+                    <p id="yearly" onclick="yearly()">Yearly</p>
+                </div>
+                <div id="cards" class="cards">
+                    <div class="basic-card">
+                        <span>
+                            <p>Basic</p>
+                            <p id="basic-price"><strong>$10</strong>/month</p>
+                        </span>
+                        <ul>
+                            <h5><a href="#" class="basic-btn">choose plan</a></h5>
+                            <li><p>3 max members</p></li>
+                            <li><p>3 programming language support</p></li>
+                            <li><p>1gb max file uploads</p></li>
+                        </ul>
+                    </div>
+                    <div class="pro-card">
+                        <span>
+                            <p>pro</p>
+                            <p id="pro-price"><strong>$20</strong>/month</p>
+                        </span> 
+                        <p class="tag">Recommended</p>
+                        <ul>
+                            <h5><a href="#" class="pro-btn">choose plan</a></h5>
+                            <li><p>7 max members</p></li>
+                            <li><p>7 programming language support</p></li>
+                            <li><p>5gb max file uploads</p></li>
+                            <li><p>AI code reviews</p></li>                
+                        </ul>
+                    </div>
+                    <div class="premium-card">
+                        <span>
+                            <p>premium</p>
+                            <p id="premium-price"><strong>$40</strong>/month</p>
+                        </span>
+                        <ul>
+                            <h5><a href="#" class="premium-btn">choose plan</a></h5>
+                            <li><p>15 max members</p></li>
+                            <li><p>19 programming language support</p></li>
+                            <li><p>10gb max file uploads</p></li>
+                            <li><p>AI code reviews</p></li>
+                            <li><p>AI copilot agent</p></li>                   
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <script>
+                const burger = document.getElementById('burger');
+                const sidebar = document.getElementById('sidebar');
+                const year = document.getElementById('yearly');
+                const month = document.getElementById('monthly');
+                const cards = document.getElementById('cards');
+                burger.addEventListener('click', () => {
+                    burger.classList.toggle('active');
+                    sidebar.classList.toggle('active');
+                });
+                function yearly(){
+                    year.style.backgroundColor = "var(--accent-color)";
+                    year.style.color = "white";
+                    month.style.backgroundColor = "transparent";   
+                    month.style.color =  "var(--text-color)";
+                    cards.classList.toggle('animate');
+                    document.getElementById('basic-price').innerHTML = "<strong>$109</strong>/year"; 
+                    document.getElementById('pro-price').innerHTML = "<strong>$216</strong>/year";
+                    document.getElementById('premium-price').innerHTML = "<strong>$432</strong>/year";
+                };
+                function monthly(){
+                    month.style.backgroundColor = "var(--accent-color)";
+                    month.style.color = "white";
+                    year.style.backgroundColor = "transparent";   
+                    year.style.color = "var(--text-color)";
+                    cards.classList.toggle('animate');
+                    document.getElementById('basic-price').innerHTML = "<strong>$10</strong>/year"; 
+                    document.getElementById('pro-price').innerHTML = "<strong>$20</strong>/year";
+                    document.getElementById('premium-price').innerHTML = "<strong>$40</strong>/year";
+                    
+                };
+            </script>
+    </body>
+</html>
