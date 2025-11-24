@@ -3,67 +3,62 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="res/icon.png" type="image/x-icon">
-        <title>Token</title>
+        <link rel="stylesheet" href="spaces.css">
+        <link rel="icon" href="#" type="image/x-icon">
+        <title>Spaces</title>
     </head>
     <body>
-        <div class="dashboard">
+        <header>
             <div class="logo">
-                <div style="display:flex; gap: 1em;">
-                <img src="res/icon.png" alt="icon" class="icon"> 
-                <p>Token</p>
-                </div>
-                <img class="hide-on-desktop burger" onclick="showSideBar()" src="res/burger.png" alt="burger">
+                <img src="res/logo-clear.png" alt="logo">
+                <h1>Spaces</h1>
             </div>
-            <div class="header">
-                <input type="text" placeholder="Search Task">
-                <div class="user-info">
-                    <img src="res/inbox.png" alt="inbox" class="inbox-icon">
-                    <img src="res/user-img.jpg" alt="user-img" class="user-img">
-                    <ul>
-                        <li><h2>king Kunta</h2></li>
-                        <li><p>Kingknt4@taskit.io</p></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="sidebar hide-on-mobile">
+            <nav class="navbar hide-on-mobile">
                 <ul>
-                    <h4>Menu</h4>
-                    <li><a class="dashboard-txt" href="#Dashboard">Dashboard</a></li>
-                    <li><a href="#analytics">Tasks</a></li>
-                    <li><a href="#calendar">Calendar</a></li>
-                    <li><a href="#analytics">Analytics</a></li>
-                    <h4>General</h4>
-                    <li><a href="#settings">Settings</a></li>
-                    <li><a href="#Help">Help</a></li>
-                    <li><a href="#Logout">Log Out</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="cta hide-on-mobile">
+                <ul>
+                    <li><a href="#">Sign in</a></li>
+                    <li class="get-demo"><a href="#">Get demo</a></li>
                 </ul>
             </div>
-            <div class="main">
-                <h1>Dashboard</h1>
-
-                <div class="info-cards">
-                    <div style="background: radial-gradient(green, rgb(3, 91, 3));">
-                        <p><img src="res/user.png"> Users</p>
-                        <h2>245</h2>
-                        <span style="color: green;"><img src="res/up.png" alt="up"><p>21.24%</p></span>
-                    </div>
-                    <div>
-                        <p><img src="res/sales.png"> Sales</p>
-                        <h2>$24.64</h2>
-                        <span style="color: red;"><img src="res/down.png" alt="down"><p>4.20%</p></span>
-                    </div>
-                    <div>
-                        <p><img src="res/revenue.png"> Total Revenue</p>
-                        <h2>$445.44</h2>
-                        <span style="color: green;"><img src="res/up.png" alt="up"><p>10.20%</p></span>
-                    </div>
-                </div>
+            <div class="menu-btn" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>    
+            <nav id="sidebar" class="sidebar">
+                <ul>
+                    <li class="get-demo"><a href="#">Get demo</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="#">Sign in</a></li>
+                </ul>
+            </nav>
+        <section class="hero-section">
+            <img class="git-card shrink" src="res/git-card.png">
+            <img class="dice" src="res/logo-white.png" alt="logo">
+            <h1>Collaborate, <span style="color: #f59e0b">build</span>, and ship</h1>
+            <h2>all in one place</h2>
+            <p>increase efficiency and reduce build time with cloud workpaces</p>
+            <a href="#">Get Free Demo</a>
+                
+                <img class="rank-card shrink" src="res/rank-card.png">
+                <img class="comm-card shrink" src="res/comm-card.png">
+        </section> 
+        <section class="display-section">
+            <div>
 
             </div>
-
-        </div>
+        </section>       
         <script src="app.js"></script>
     </body>
 </html>

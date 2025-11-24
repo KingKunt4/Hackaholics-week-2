@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="dashboard.css">
+        <link rel="icon" href="res/logo-clear.png" type="image/x-icon">
+        <title>Pricing | Spaces</title>
+    </head>
+    <body>
+        <div class="dash">
+            <nav id="sidebar" class="sidebar">
+                <ul>
+                    <li><a href="spaces.html">Dashboard</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="blog.html">Resources</a></li>
+                    <li><a href="#">Spaces</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <header>
+                    <div class="burger" id="burger"><img src="res/logo-clear.png" alt="logo"></div>
+                    <h1>Dashboard</h1>
+                    <div class="search">
+                        <input type="text" placeholder="search...">
+                        <a href="#search"><img src="res/search.png" alt="search" class="search-icon"></a>
+                    </div>
+                    <div class="user-info">
+                        <img src="res/user-img.jpg" alt="user-img" class="user-img">
+                        <ul class="hide-on-mobile">
+                            <li><h2>king Kunta</h2></li>
+                            <li><p>Kingkunt4@spaces.com</p></li>
+                        </ul>
+                    </div>
+                </header>
+                <section class="metrics">
+                    <div class="wrapper">
+                    <div class="cards">
+                        <p><img src="res/user.png"> Users</p>
+                        <h2>245</h2>
+                        <span style="color: green;"><img src="res/up.png" alt="up"><p>21.24%</p></span>
+                    </div>
+                    <div class="cards">
+                        <p><img src="res/sales.png"> Sales</p>
+                        <h2>$24.64</h2>
+                        <span style="color: red;"><img src="res/down.png" alt="down"><p>4.20%</p></span>
+                    </div>
+                    <div class="cards">
+                        <p><img src="res/revenue.png"> Total Revenue</p>
+                        <h2>$445.44</h2>
+                        <span style="color: green;"><img src="res/up.png" alt="up"><p>10.20%</p></span>
+                    </div>
+                    </div>
+                </section>
+                <section class="reports">
+                    <h2>Metrics</h2>
+                    <canvas id="chart"></canvas>
+                </section>
+            </div>
+        </div>    
+        <script src="app.js"></script>
+        <script src="chart.umd.min.js"></script>
+        <script>
+            const chart = document.getElementById('chart');
+            new Chart(chart, {
+               type: 'bar',
+               data: {
+                   labels: ['mon', 'tue', 'wed', 'thu', 'fri'],
+                   datasets: [{
+                       label: 'User Count',
+                       data: ['124', '151', '199', '217', '241'],
+                       backgroundColor: ['#7c3aed']
+                   }]
+               }
+            })
+        </script>
+    </body>
+</html>
