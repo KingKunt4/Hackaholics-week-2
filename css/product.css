@@ -1,0 +1,114 @@
+*{
+    --primary-color: #7c3aed;
+    --accent-color: #f59e0b;
+    --text-color: #1f2937;
+    --background-color: #faf5ff;
+}
+body{
+    margin: 0;
+    padding: 2px;
+    border-radius: 2px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+.nav{
+    padding: 10px;
+    margin-bottom: 2em;
+}
+.nav a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.detail-section{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 450px));
+    justify-content: center;
+    padding: 10px;
+}
+.details span{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    margin-top: -2em;
+    margin-bottom: -2em;
+}
+.details span img{
+    width: 70px;
+}
+.wrapper{
+    max-heigth: 50vh;
+}
+.mockup{
+    position: relative;
+    max-width: 600px;
+    overflow: hidden;
+}
+.slides{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+.slide{
+    min-width: 100%;
+    
+}
+.prev, .nxt{
+    position: absolute;
+    top: 50%;
+    transform :translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+}
+.prev{
+    left: 10px;
+}
+.nxt{
+    right: 10px;
+}
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 1em;
+}
+.overview{
+    background-color: var(--primary-color);
+    color: white;
+}
+.cards{
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px var(--text-color);
+    width: auto;
+    min-width: 100px;
+    line-heigth: 0.5;
+}
+.cards img{
+    width: 3em;
+}
+.related-section{
+    padding: 10px;
+    background-color: white;
+}
+.wrapper{
+    margin-top: 2em;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.related-section .carousel{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+    align-content: center;
+}

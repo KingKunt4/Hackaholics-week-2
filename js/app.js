@@ -1,4 +1,5 @@
-const menuBtn = document.getElementById('burger');
+console.log('app.js loaded');
+const burger = document.getElementById('burger');
 const sideBar = document.getElementById('sidebar');
 const year = document.getElementById('yearly');
 const month = document.getElementById('monthly');
@@ -38,3 +39,16 @@ function monthly(){
     document.getElementById('pro-price').innerHTML = "<strong>$20</strong>/year";
     document.getElementById('premium-price').innerHTML = "<strong>$40</strong>/year";
 };
+
+const chart = document.getElementById('chart');
+new Chart(chart, {
+    type: 'bar',
+    data: {
+        labels: ['mon', 'tue', 'wed', 'thu', 'fri'],
+        datasets: [{
+            label: 'User Count',
+            data: ['124', '151', '199', '217', '241'],
+            backgroundColor: ['#7c3aed']
+        }]
+    }
+});

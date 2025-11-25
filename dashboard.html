@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="css/dashboard.css">
         <link rel="icon" href="res/logo-clear.png" type="image/x-icon">
         <title>Pricing | Spaces</title>
     </head>
@@ -59,21 +59,7 @@
                 </section>
             </div>
         </div>    
-        <script src="app.js"></script>
-        <script src="chart.umd.min.js"></script>
-        <script>
-            const chart = document.getElementById('chart');
-            new Chart(chart, {
-               type: 'bar',
-               data: {
-                   labels: ['mon', 'tue', 'wed', 'thu', 'fri'],
-                   datasets: [{
-                       label: 'User Count',
-                       data: ['124', '151', '199', '217', '241'],
-                       backgroundColor: ['#7c3aed']
-                   }]
-               }
-            })
-        </script>
+        <script src="js/chart.umd.min.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

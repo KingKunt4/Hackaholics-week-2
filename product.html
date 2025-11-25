@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/product.css">
+        <link rel="icon" href="res/logo-clear.png" type="image/x-icon">
+        <title>Pricing | Spaces</title>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="#">Home /</a>
+            <a href="#">add-ons /</a>
+            <a href="#"><strong>versions</strong></a>
+        </div>
+        <section class="detail-section">
+            <div class="mockup">
+                <div class="wrapper">
+                    <div class="slides">
+                        <img src="res/screen-1.jpg" class="slide">
+                        <img src="res/screen-2.jpg" class="slide">
+                        <img src="res/screen-3.png" class="slide">
+                        <img src="res/screen-4.png" class="slide">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="nxt">&#10095;</button>
+                </div>
+            </div>
+            <div class="details">
+                <h2>Versions</h2>
+                <h3>$24.00</h3>
+                <span><img src="res/star.png"><p>(1,024 reviews)</p></span>
+                <p>Versions is a git wrapper in Spaces that aids version control and code sharing among collaborators.</p>
+                <div class="tabs">
+                    <button class="overview" onclick="overView()">Overview</button>
+                    <button class="features" onclick="Features()">Features</button>
+                    <button class="reviews" onclick="Reviews()">Reviews</button>
+                </div>
+                <div class="tab"><h2>Overview</h2><p>Versions is a powerful add-on designed to bring seamless version control to collaborative environments. Whether you're managing product roadmaps, editing shared documents, or coordinating across distributed teams, Versions ensures every change is tracked, every iteration is preserved, and every contributor stays in sync.</p></div>
+            </div>
+        </section>
+        <section class="related-section">
+            <h2>Related tools</h2>
+            <div class="wrapper">
+            <div class="carousel">
+                <div class="cards">
+                    <img src="res/wingman.jpg">
+                    <p>wingman</p>
+                    <p>$13.99</p>
+                    <p>⭐4.7</p>
+                </div>
+                <div class="cards">
+                    <img src="res/calendar.jpg">
+                    <p>Calendar</p>
+                    <p>$9.00</p>
+                    <p>⭐4.5</p>
+                </div>
+                <div class="cards">
+                    <img src="res/co-lab.jpg">
+                    <p>co-lab</p>
+                    <p>$14.99</p>
+                    <p>⭐4.4</p>
+                </div>
+                <div class="cards">
+                    <img src="res/s-lint.jpg">
+                    <p>S-lint</p>
+                    <p>$13.00</p>
+                    <p>⭐4.0</p>
+                </div>
+                <div class="cards">
+                    <img src="res/lin-ux.jpg">
+                    <p>Lin.UX</p>
+                    <p>$21.99</p>
+                    <p>⭐4.7</p>
+                </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            console.log(document.querySelectorAll('.slide'));
+            const track = document.querySelector('.slides');
+            const prev = document.querySelector('.prev');
+            const nxt = document.querySelector('.nxt');
+            let currentIndex = 0;
+            function showSlide() {
+                const offset = -currentIndex * 100;
+                track.style.transform = `translateX(${offset}%)`;
+            }
+            prev.addEventListener('click', () => {
+                currentIndex = (currentIndex -1 + slides.length) % slides.length;
+                showSlide();
+            });
+            nxt.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide();
+            });
+            showSlide();
+            console.log('slides found: ', slides.length);
+            });
+            const overview = document.querySelector('.overview');
+            const features = document.querySelector('.features');
+            const reviews = document.querySelector('.reviews');
+            function overView(){
+                overview.style.backgroundColor = "var(--primary-color)";
+                overview.style.color = "white";
+                features.style.backgroundColor = "white";   
+                features.style.color = "var(--text-color)";
+                reviews.style.backgroundColor = "white";   
+                reviews.style.color = "var(--text-color)";
+                document.querySelector('.tab').innerHTML = "<h2>Overview</h2><p>Versions is a powerful add-on designed to bring seamless version control to collaborative environments. Whether you're managing product roadmaps, editing shared documents, or coordinating across distributed teams, Versions ensures every change is tracked, every iteration is preserved, and every contributor stays in sync.</p>"; 
+        };
+        function Features(){
+                features.style.backgroundColor = "var(--primary-color)";
+                features.style.color = "white";
+                overview.style.backgroundColor = "white";   
+                overview.style.color = "var(--text-color)";
+                reviews.style.backgroundColor = "white";   
+                reviews.style.color = "var(--text-color)";
+                document.querySelector('.tab').innerHTML = "<h2>Features</h2><ul><li> Branching Timelines: Visualize changes across multiple contributors with intuitive branching and merging.</li><br><li>Real-Time Collaboration: See who’s editing what, when, and why, with instant updates across devices.</li><br><li>Version Snapshots: Capture and restore any previous state with one click, ensuring nothing is ever lost.</li><br><li>Role-Based Access: Control who can view, edit, or approve changes with granular permissions.</li><br><li>Audit Trail: Maintain a secure, searchable log of all revisions for compliance and transparency.</li></ul>"; 
+        };
+        function Reviews(){
+                reviews.style.backgroundColor = "var(--primary-color)";
+                reviews.style.color = "white";
+                overview.style.backgroundColor = "white";   
+                overview.style.color = "var(--text-color)";
+                features.style.backgroundColor = "white";   
+                features.style.color = "var(--text-color)";
+                document.querySelector('.tab').innerHTML = "<h2>Reviews</h2><p><i>\"Versions has completely transformed the way our team collaborates. Before, tracking changes across multiple contributors was chaotic and error-prone. Now, every update is logged, every branch is visible, and rolling back to a previous state is effortless. The interface is clean and intuitive, with a color scheme that makes navigation feel modern and professional. I especially love the branching timelines and version snapshots. They give us confidence that nothing will ever be lost. The mobile dashboard is a huge plus, letting me approve changes on the go. Overall, Versions has become an indispensable tool in our workflow, saving us time and reducing stress.\"</i>  — Martin.</p>"; 
+        };
+        </script>
+    </body>
+</html> 
