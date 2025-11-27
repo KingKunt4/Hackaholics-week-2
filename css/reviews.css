@@ -1,0 +1,87 @@
+*{
+    --primary-color: #7c3aed;
+    --accent-color: #f59e0b;
+    --text-color: #1f2937;
+    --background-color: #faf5ff;
+}
+body{
+    margin: 0;
+    padding: 2px;
+    border-radius: 2px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+.nav{
+    padding: 10px;
+    margin-bottom: 2em;
+}
+.nav a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.wrapper{
+    position: relative;
+    max-width: 90%;
+    overflow: hidden;
+    margin: 0px auto;
+    margin-bottom: 5em;
+}
+.cards{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    padding: 25px;
+    gap: 30px;
+    width: 100%;
+}
+.card{
+    min-width: 50%;
+    text-align: center;
+    padding: 10px;
+    margin: 0px auto;
+    background-color: white;
+}
+.card img{
+    width: 100px;
+    border-radius: 10em;
+}
+.prev, .nxt{
+    position: absolute;
+    top: 50%;
+    transform :translateY(-50%);
+    cursor: pointer;
+    font-size: 2em;
+    background-color: transparent;
+    color: black;
+    padding: 20px;
+    border: none;
+}
+.prev{
+    left: -10px;
+}
+.nxt{
+    right: -10px;
+}
+.cta{
+    text-align: center;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 46vh;
+    padding: 10px 0px;
+}
+.cta a{
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid var(--background-color);
+    font-weight: 800;
+    transition: 0.3s;
+}
+.cta a:hover{
+    background-color: transparent;
+    color: var(--background-color);
+}

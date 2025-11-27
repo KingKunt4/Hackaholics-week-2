@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reviews.css">
+        <link rel="icon" href="res/logo-clear.png" type="image/x-icon">
+        <title>Reviews | Spaces</title>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="#">Home /</a>
+            <a href="#">Spaces /</a>
+            <a href="#"><strong>Reviews</strong></a>
+        </div>
+        <section class="reviews-section>">
+            <div class="wrapper">
+                <div class="cards">
+                    <div class="card">
+                        <img src="res/thomas.jpg">
+                        <h2>Thomas Steele</h2>
+                        <p>Marketing Head</p>
+                        <i>"The best version control tool out there. Simple, effective, and my team love it."</i>
+                    </div>
+                    <div class="card active">
+                        <img src="res/london.jpeg">
+                        <h2>London Varnell</h2>
+                        <p>Software Engineer</p>
+                        <i>"It's so easy to see who made what changes and when. A huge help for our productivity."</i>
+                    </div>
+                    <div class="card">
+                        <img src="res/tomiwa.jpg">
+                        <h2>Tomiwa Badmus</h2>
+                        <p>Founder</p>
+                        <i>"Our projects move faster with fewer restrictions and our team collaborates better with this tool."</i>
+                    </div>
+                    <div class="card">
+                        <img src="res/khaleed.jpg">
+                        <h2>Khaleed B.</h2>
+                        <p>Senior Software Engineer</p>
+                        <i>"Nowadays we hardly have to be in the office, we can just get work done on the go. Collaboration has never been easier"</i>
+                    </div>
+                    <div class="card">
+                        <img src="res/sam.jpg">
+                        <h2>Samuel Balogun</h2>
+                        <p>Dev ops Engineer</p>
+                        <i>"Spaces make it easier to find and connect with talented people any where in the world.</i>
+                    </div>
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="nxt">&#10095;</button>
+            </div>
+        </section>
+        <section class="cta">
+            <h1>Build faster, ship faster, communicate better.</h1>
+            <a href="spaces.html">Get Started</a>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.card');
+            const track = document.querySelector('.cards');
+            const prev = document.querySelector('.prev');
+            const nxt = document.querySelector('.nxt');
+            let currentIndex = 0;
+            function showSlide() {
+                const offset = -currentIndex * 50;
+                track.style.transform = `translateX(${offset}%)`;
+            }
+            prev.addEventListener('click', () => {
+                currentIndex = (currentIndex -1 + slides.length) % slides.length;
+                showSlide();
+            });
+            nxt.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide();
+            });
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide();
+            }, 5000)
+            showSlide();
+        });
+        </script>
+    </body>
+</html>
