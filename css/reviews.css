@@ -5,9 +5,7 @@
     --background-color: #faf5ff;
 }
 body{
-    margin: 0;
-    padding: 2px;
-    border-radius: 2px;
+    margin:0;
     color: var(--text-color);
     background-color: var(--background-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
